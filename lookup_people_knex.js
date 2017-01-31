@@ -13,7 +13,7 @@ const knex = require("knex")({
 
 const input = process.argv[2];
 
-const q = knex.select().from('famous_people')
+knex.select().from('famous_people')
   .where('first_name', 'like', input)
   .orWhere('last_name', 'like', input)
   .then(function (result) {

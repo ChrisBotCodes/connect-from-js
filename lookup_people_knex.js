@@ -21,7 +21,6 @@ knex.select().from('famous_people')
     if (result.length === 0) {
       return console.log("error - cannot find any matches");
     } else {
-      console.log(typeof result);
       if (input.indexOf('%') > -1) {
         const inputSplit = input.split('%').toString()
         const contains = inputSplit.substring(1, inputSplit.length -1);
